@@ -33,6 +33,10 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.css$/i,
+        use: ["css-loader"],
+      },
     ],
   },
   devServer: {
@@ -52,6 +56,10 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, "assets/**/*"),
+          to: path.resolve(__dirname, "build"),
+        },
+        {
+          from: path.resolve(__dirname, "style/**/*"),
           to: path.resolve(__dirname, "build"),
         },
       ],

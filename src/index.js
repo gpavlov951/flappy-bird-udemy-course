@@ -5,12 +5,15 @@ import PreloadScene from "./scenes/preload";
 import ScoreScene from "./scenes/score";
 import PauseScene from "./scenes/pause";
 
-const WIDTH = 600;
-const HEIGHT = 600;
+const { width, height } = window.screen;
+
+const DEFAULT_WIDTH = 600;
+const DEFAULT_HEIGHT = 600;
+
 const SHARED_CONFIG = {
-  width: WIDTH,
-  height: HEIGHT,
-  startPosition: { x: WIDTH / 10, y: HEIGHT / 2 },
+  width: DEFAULT_WIDTH > width ? width : DEFAULT_WIDTH,
+  height: DEFAULT_HEIGHT,
+  startPosition: { x: DEFAULT_WIDTH / 10, y: DEFAULT_HEIGHT / 2 },
 };
 
 const scenes = [PreloadScene, ScoreScene, MenuScene, PlayScene, PauseScene];
