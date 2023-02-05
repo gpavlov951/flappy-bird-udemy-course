@@ -11,7 +11,7 @@ module.exports = {
   devtool: "eval-source-map",
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "game"),
   },
   optimization: {
     splitChunks: {
@@ -40,7 +40,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "build"),
+    contentBase: path.resolve(__dirname, "game"),
     compress: true,
     port: 8080,
   },
@@ -56,11 +56,11 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, "assets/**/*"),
-          to: path.resolve(__dirname, "build"),
+          to: path.resolve(__dirname, "game"),
         },
         {
           from: path.resolve(__dirname, "style/**/*"),
-          to: path.resolve(__dirname, "build"),
+          to: path.resolve(__dirname, "game"),
         },
       ],
     }),

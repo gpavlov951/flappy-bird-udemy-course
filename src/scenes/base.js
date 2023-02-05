@@ -13,7 +13,10 @@ export default class BaseScene extends Scene {
   }
 
   create() {
-    this.add.image(0, 0, "sky").setOrigin(0);
+    this.add
+      .image(0, 0, "sky")
+      .setOrigin(0)
+      .setDisplaySize(this.config.width, this.config.height);
   }
 
   createMenu(menu, setupMenuEvents) {

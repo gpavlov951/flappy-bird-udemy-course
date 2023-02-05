@@ -20,16 +20,20 @@ export default class PlayScene extends BaseScene {
     this.currentDifficulty = "";
     this.difficulties = {
       easy: {
-        pipeHorizontalDistanceRange: [300, 350],
-        pipeVerticalDistanceRange: [150, 200],
+        pipeHorizontalDistanceRange: [300, 400], // 100
+        pipeVerticalDistanceRange: [150, 250], // 100
       },
       normal: {
-        pipeHorizontalDistanceRange: [280, 330],
-        pipeVerticalDistanceRange: [140, 190],
+        pipeHorizontalDistanceRange: [280, 350], // 70
+        pipeVerticalDistanceRange: [130, 200], // 70
       },
       hard: {
-        pipeHorizontalDistanceRange: [250, 310],
-        pipeVerticalDistanceRange: [120, 170],
+        pipeHorizontalDistanceRange: [260, 310], // 50
+        pipeVerticalDistanceRange: [120, 170], // 50
+      },
+      expert: {
+        pipeHorizontalDistanceRange: [240, 280], // 40
+        pipeVerticalDistanceRange: [110, 150], // 40
       },
     };
   }
@@ -236,6 +240,7 @@ export default class PlayScene extends BaseScene {
     const bestScore = getBestScore();
     const normalDifficulty = bestScore ? Math.floor(bestScore * 0.5) : 20;
     const hardDifficulty = bestScore ? Math.floor(bestScore * 0.8) : 40;
+    const expertDifficulty = bestScore ? Math.floor(bestScore * 0.9) : 70;
 
     if (this.score === normalDifficulty) {
       this.currentDifficulty = "normal";
@@ -243,6 +248,10 @@ export default class PlayScene extends BaseScene {
 
     if (this.score === hardDifficulty) {
       this.currentDifficulty = "hard";
+    }
+
+    if (this.score === expertDifficulty) {
+      this.currentDifficulty = "expert";
     }
   }
 
