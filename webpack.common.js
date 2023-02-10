@@ -10,7 +10,7 @@ module.exports = {
   },
   devtool: "eval-source-map",
   output: {
-    filename: "[name].js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "game"),
   },
   optimization: {

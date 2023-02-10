@@ -5,15 +5,15 @@ import PreloadScene from "./scenes/preload";
 import ScoreScene from "./scenes/score";
 import PauseScene from "./scenes/pause";
 
-const { width: screenWidth, height: screenHeight } = window.screen;
+const { innerWidth, innerHeight } = window;
 const DEFAULT_WIDTH = 600;
 const DEFAULT_HEIGHT = 600;
 
 const regexp = /android|iphone|kindle|ipad/i;
 const isMobileDevice = regexp.test(navigator.userAgent);
 
-const width = isMobileDevice ? screenWidth : DEFAULT_WIDTH;
-const height = isMobileDevice ? screenHeight : DEFAULT_HEIGHT;
+const width = isMobileDevice ? innerWidth : DEFAULT_WIDTH;
+const height = isMobileDevice ? innerHeight : DEFAULT_HEIGHT;
 
 const SHARED_CONFIG = {
   width: width,
