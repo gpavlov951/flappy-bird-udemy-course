@@ -4,7 +4,13 @@ My version of the Flappy Bird game based on [Udemy Course](https://www.udemy.com
 
 ## How to play
 
-After cloning the repo you can start the game with `npm start` and the game will be available on http://localhost:8080/
+### Local
+
+  After cloning the repo you can start the game with `npm start` and the game will be available on http://localhost:8080/
+
+### Deployed
+
+  https://gpavlov951.github.io/flappy-bird-udemy-course/game/
 
 ## Score
 
