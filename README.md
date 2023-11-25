@@ -10,7 +10,7 @@ My version of the Flappy Bird game based on [Udemy Course](https://www.udemy.com
 
 ### Deployed
 
-  https://gpavlov951.github.io/flappy-bird-udemy-course/game/
+  [Game](https://gpavlov951.github.io/flappy-bird-udemy-course/game/)
 
 ## Score
 
